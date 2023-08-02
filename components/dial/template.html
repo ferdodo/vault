@@ -1,0 +1,10 @@
+<div class="dial">
+	<template v-for="symbol in dial.size">
+		<div class="symbol-container" :style="`transform: rotate(${ getRotation(symbol) + rotationOffset }deg);`">
+			<div class="symbol"> <span> {{symbol}} </span> </div>
+		</div>
+	</template>
+
+	<div class="turn-left-clickzone" @click="turnDialLeft(dial.id)"></div>
+	<div class="turn-right-clickzone" @click="turnDialRight(dial.id)"></div>
+</div>

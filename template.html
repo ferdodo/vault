@@ -1,0 +1,26 @@
+<cookies-panel>
+	<cookies-h1> Vault </cookies-h1>
+
+	<cookies-p>
+		Trouvez la bonne combinaison en tournant les cadrans tout en écoutant le bruit du coffre.
+	</cookies-p>
+
+	<audio src="sounds/click1.mp3"></audio>
+	<audio src="sounds/click2.mp3"></audio>
+	<audio src="sounds/click3.mp3"></audio>
+	<audio src="sounds/click4.mp3"></audio>
+
+	<div class="playground">
+		<dial-component id="dial1" dial-id="1"></dial-component>
+		<dial-component id="dial2" dial-id="2"></dial-component>
+		<dial-component id="dial3" dial-id="3"></dial-component>
+		<dial-component id="dial4" dial-id="4"></dial-component>
+	</div>
+
+	<div v-if="win">
+		<cookies-p style="text-align:center">
+			🎉 C'est gagné pour aujourd'hui ! 🥳 <br>
+			<cookies-button title="Copier dans le presse-papier" @click="share()"> Partager </cookies-button>
+		</cookies-p>
+	</div>
+</cookies-panel>

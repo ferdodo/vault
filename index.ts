@@ -31,6 +31,12 @@ const app = createApp({
 					playClick3();
 					break;
 				case 4:
+					//@ts-ignore
+					if (window.opener?.registerScore) {
+						//@ts-ignore
+						window.opener.registerScore("vault", rotationCount);
+						window.close();
+					}
 					win.value = true;
 					playClick4();
 			}
